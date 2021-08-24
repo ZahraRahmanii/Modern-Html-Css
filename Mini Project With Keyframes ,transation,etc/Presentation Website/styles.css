@@ -1,0 +1,79 @@
+:root{
+    --color-page-1:rgb(49, 49, 49);
+    --color-page-2:rgb(70, 69, 69);
+    --color-page-3:rgb(92, 91, 91);
+    --color-page-4:rgb(121, 119, 119);
+    --animate-speed:3s;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+    overflow: hidden;
+}
+#page-1{ background: var(--color-page-1);}
+#page-2{ background: var(--color-page-2);}
+#page-3{ background: var(--color-page-3);}
+#page-4{ background: var(--color-page-4);}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 4rem;
+    height: 100vh;
+}
+.page h1{
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem;
+}
+.page p{
+    font-size: 1.4rem;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 1.4rem;
+    color:#333;
+    background: #f4f4f4f4;
+    text-decoration: none;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    transition: all 0.4s ease-in-out;
+}
+.btn:hover,.btn-primary{
+    background: #18607c;
+    color: #fff;
+}
+.btn-primary:hover{
+    background: #f4f4f4f4;
+    color: #333;
+}
+/*Page Animation*/
+#page-1 h1 {
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+  
+#page-1 p {
+    transform: translateY(1800px);
+    animation: heading var(--animate-speed) forwards ease-in 1s;
+}
+  
+/* Keyframes */
+@keyframes heading {
+    to {
+    transform: translateY(0);
+    }
+}
+
+/*@keyframes text {
+    to {
+    transform: translateX(0);
+    }
+}*/
